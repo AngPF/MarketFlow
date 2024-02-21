@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-- [ ] CRUD de Produto 
-- [ ] CRUD Categorias
-- [ ] Dashboard
+- [ ] CRUD de Avaliação 
+- [ ] CRUD de Titulos
+- [ ] Dashboar
 - [ ] Autenticação
