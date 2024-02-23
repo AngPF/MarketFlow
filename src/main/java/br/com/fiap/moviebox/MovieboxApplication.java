@@ -15,7 +15,7 @@ public class MovieboxApplication {
 
 	@RequestMapping("/home")
 	public String home(){
-		return "Página Inicial! Caralho!";
+		return "Página Inicial!";
 	}
 
 }
