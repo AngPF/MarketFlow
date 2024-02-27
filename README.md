@@ -9,38 +9,237 @@
 
 ## EndPoints
 
-### Categorias
+## 1. Usuários:
+`GET` /usuarios/{id}: 
 
-1. *Usuários:*
-   - POST /usuarios: Criar um novo usuário.
-   - GET /usuarios/{id}: Obter detalhes de um usuário específico.
-   - PUT /usuarios/{id}: Atualizar informações de um usuário.
-   - DELETE /usuarios/{id}: Excluir um usuário.
+Obter detalhes de um usuário específico.
 
-2. *Filmes:*
-   - GET /filmes: Obter uma lista de todos os filmes.
-   - GET /filmes/{id}: Obter detalhes de um filme específico.
-   - POST /filmes: Adicionar um novo filme à lista.
-   - PUT /filmes/{id}: Atualizar informações de um filme.
-   - DELETE /filmes/{id}: Remover um filme da lista.
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
 
-3. *Avaliações:*
-   - POST /avaliacoes: Adicionar uma nova avaliação de um filme.
-   - GET /avaliacoes/{id}: Obter detalhes de uma avaliação específica.
-   - PUT /avaliacoes/{id}: Atualizar uma avaliação existente.
-   - DELETE /avaliacoes/{id}: Remover uma avaliação.
+## 
 
-4. *Listas de Assistidos/Favoritos:*
-   - GET /usuarios/{id}/assistidos: Obter a lista de filmes assistidos por um usuário.
-   - GET /usuarios/{id}/favoritos: Obter a lista de filmes favoritos de um usuário.
-   - POST /usuarios/{id}/assistidos: Adicionar um filme à lista de assistidos de um usuário.
-   - POST /usuarios/{id}/favoritos: Adicionar um filme à lista de favoritos de um usuário.
-   - DELETE /usuarios/{id}/assistidos/{filme_id}: Remover um filme da lista de assistidos de um usuário.
-   - DELETE /usuarios/{id}/favoritos/{filme_id}: Remover um filme da lista de favoritos de um usuário.
+`POST` /usuarios: 
 
-5. *Comentários:*
-   - POST /comentarios: Adicionar um novo comentário a um filme ou avaliação.
-   - GET /comentarios/{id}: Obter detalhes de um comentário específico.
-   - PUT /comentarios/{id}: Atualizar um comentário existente.
-   - DELETE /comentarios/{id}: Remover um comentário.
+Criar um novo usuário.
+
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+
+`PUT` /usuarios/{id}: 
+
+Atualizar informações de um usuário.
+
+**códigos de status**
+     
+`200` sucesso ou `404` id não encontrado ou`400` validação falhou.
+
+##
+
+`DELETE` /usuarios/{id}: 
+
+Excluir um usuário.
+
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
+
+---
+
+
+## 2. Filmes:
+`GET` /filmes:
+
+Obter uma lista de todos os filmes.
+   
+**códigos de status**
+   
+`200` sucesso.
+
+##
+     
+`GET` /filmes/{id}: 
+
+Obter detalhes de um filme específico.
+   
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
+
+##
+   
+`POST` /filmes:
+
+Adicionar um novo filme à lista.
+     
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+     
+`PUT` /filmes/{id}: 
+
+Atualizar informações de um filme.
+     
+**códigos de status**
+     
+`200` sucesso ou `404` id não encontrado ou`400` validação falhou.
+
+##
+     
+`DELETE` /filmes/{id}:
+
+Remover um filme da lista.
+     
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
+
+---
+
+## 3. Avaliações:
+`GET` /avaliacoes/{id}: 
+
+Obter detalhes de uma avaliação específica.
+
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
+
+##
+
+`POST` /avaliacoes: 
+
+Adicionar uma nova avaliação de um filme.
+
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+
+`PUT` /avaliacoes/{id}: 
+
+Atualizar uma avaliação existente.
+
+**códigos de status**
+     
+`200` sucesso ou `404` id não encontrado ou`400` validação falhou.
+
+##
+
+`DELETE` /avaliacoes/{id}: 
+
+Remover uma avaliação.
+
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
+
+---
+
+## 4. Listas de Assistidos/Favoritos:
+`GET` /usuarios/{id}/assistidos: 
+
+Obter a lista de filmes assistidos por um usuário.
+
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
+
+##
+
+`GET` /usuarios/{id}/favoritos: 
+
+Obter a lista de filmes favoritos de um usuário.
+
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
+
+##
+
+`POST` /usuarios/{id}/assistidos: 
+
+Adicionar um filme à lista de assistidos de um usuário.
+
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+
+`POST` /usuarios/{id}/favoritos: 
+
+Adicionar um filme à lista de favoritos de um usuário.
+
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+
+`DELETE` /usuarios/{id}/assistidos/{filme_id}: 
+
+Remover um filme da lista de assistidos de um usuário.
+
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
+
+##
+
+`DELETE` /usuarios/{id}/favoritos/{filme_id}: 
+
+Remover um filme da lista de favoritos de um usuário.
+
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
+
+---
+
+## 5. Comentários:
+`GET` /comentarios/{id}: 
+
+Obter detalhes de um comentário específico.
+
+**códigos de status**
+   
+`200` sucesso ou `404` id não encontrado.
+
+##
+
+`POST` /comentarios: 
+
+Adicionar um novo comentário a um filme ou avaliação.
+
+**códigos de status**
+     
+`201` criado com sucesso ou `400` validação falhou.
+
+##
+
+`PUT` /comentarios/{id}: 
+
+Atualizar um comentário existente.
+
+**códigos de status**
+     
+`200` sucesso ou `404` id não encontrado ou`400` validação falhou.
+
+## 
+
+`DELETE` /comentarios/{id}: 
+
+Remover um comentário.
+
+**códigos de status**
+     
+`204` apagado com sucesso ou `404` id não encontrado.
 
