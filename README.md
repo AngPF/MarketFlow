@@ -99,6 +99,16 @@ Remover um filme da lista.
      
 `204` apagado com sucesso ou `404` id não encontrado.
 
+**Schema**
+
+```js
+{
+    "id": 1,
+    "nome": "Avenger EndGame"
+}
+
+```
+
 ---
 
 ## 3. Avaliações:
