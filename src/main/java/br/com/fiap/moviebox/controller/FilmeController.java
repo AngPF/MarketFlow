@@ -61,12 +61,12 @@ public class FilmeController {
     public ResponseEntity<Object> destroy(@PathVariable Long id) {
         log.info("apagando filme {}", id);
 
-        var optionalCategoria = buscarFilmePorId(id);
+        var optionalFilme = buscarFilmePorId(id);
 
-        if (optionalCategoria.isEmpty())
+        if (optionalFilme.isEmpty())
             return ResponseEntity.notFound().build();
 
-        repository.remove(optionalCategoria.get());
+        repository.remove(optionalFilme.get());
 
         return ResponseEntity.noContent().build();
 
