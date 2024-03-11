@@ -1,15 +1,17 @@
 package br.com.fiap.moviebox.model;
 
-import java.util.Random;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
 
-public record Filme(Long id, String nome) {
+@Data
+@Entity
+public class Filme {
 
-    public Filme(Long id, String nome){
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String nome;
 
-        var key = (id != null) ? id : Math.abs(new Random().nextLong());
-        this.id = key;
-        this.nome = nome;
-
-    }
-    
 }
